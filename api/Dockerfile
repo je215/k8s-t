@@ -14,6 +14,8 @@ RUN npm install -g nodemon
 # Copy the rest of your application code to the working directory
 COPY . .
 
+EXPOSE 3000
+
 # Command to start your Node.js application
 #CMD ["npm", "start"]
 CMD ["nodemon", "start"]
