@@ -27,7 +27,7 @@ const calculate = (n1, operator, n2) => {
     //If post request to port 3001 was successful, return n1, n2 and operator and add <li> to history
     const result = $.ajax({
         type: 'POST',
-        url: 'http://localhost:3001',
+        url: 'http://10.0.11.32:3001',
         dataType: 'json',
         data: request,
         success: function (data) {
