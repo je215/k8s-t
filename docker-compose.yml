@@ -9,9 +9,7 @@ services:
       - test-network
     depends_on:
       - backend
-    environment:
-      - REACT_APP_BACKEND_URL=http://backend:3001 
-
+    
   backend:
     build:
       context: ./web
@@ -19,7 +17,7 @@ services:
       - "3001:3001"
     networks:
       - test-network
-      
+
 networks:
   test-network:
 
