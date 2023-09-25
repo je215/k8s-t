@@ -1,0 +1,26 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./api
+    ports:
+      - "3000:3000"
+    networks:
+      - test-network
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_BACKEND_URL=http://backend:3001 
+
+  backend:
+    build:
+      context: ./web
+    ports:
+      - "3001:3001"
+    networks:
+      - test-network
+      
+networks:
+  test-network:
+
+
