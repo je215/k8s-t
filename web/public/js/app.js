@@ -34,7 +34,7 @@ var calculate = function calculate(n1, operator, n2) {
 
   var result = $.ajax({
     type: 'POST',
-    url: 'http://0.0.0.0:3001',
+    url: 'http://0.0.0.0:3000',
     dataType: 'json',
     data: request,
     success: function success(data) {
