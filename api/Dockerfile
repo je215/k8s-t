@@ -9,6 +9,7 @@ COPY package*.json ./
 
 # Install project dependencies
 RUN npm install
+RUN npm install cors
 RUN npm install -g nodemon
 
 # Copy the rest of your application code to the working directory
